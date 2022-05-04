@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+    <h2>Select a Country</h2>
+    <p>Select a Country to see their Past Population, Future Population, and Average Population across All Countries over the Years</p>
+    <form action="/select" method="POST">
+        <table border = 0>
+            <th>Country Name</th>
+            {% for c in country_list %}
+            <tr>
+                <th style="text-align:left"><input type="radio" name="country" id={{c}} value={{c}}> {{c}} </input></th>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="number" name="year" placeholder="Year">
+        <input type="submit" value="See the Graph for this Country">
+    </form>
+
+</body>
+</html>

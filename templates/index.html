@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Welcome to my Final Project!</h1>
+    <p>Register or Log In to continue :)</p>
+    <h2>Register</h2>
+        <form action="/register" method="POST">
+            <input type="username" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="Create new user">
+        </form>
+    <h2>Log In</h2>
+        <form action="/login" method="POST">
+            <input type="username" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="Log In">
+        </form>
+    <p> {{login_error}} </p>
+</body>
+</html>
